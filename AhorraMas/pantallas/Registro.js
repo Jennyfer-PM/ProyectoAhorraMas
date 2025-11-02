@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, TextInput, Button, Alert, Platform, TouchableOpacity} from 'react-native'
+import { Text, StyleSheet, View, TextInput, Alert, Platform, TouchableOpacity} from 'react-native'
 import React, { useState } from 'react'
 
 const validar = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
@@ -9,41 +9,38 @@ export default function Registro({navigation}){
     const [clave, setClave] = useState('');
 
     const mostrarAlerta = () => {
-            if ((correo.trim()==='') && (clave.trim)) {
-                if(Platform.OS === 'web') {
-                    window.alert ('Error, porfavor ingresa los campos correspondientes');
-                } else {
-                    Alert.alert ('Error, porfavor ingresa los campos correspondientes')
-                }
-            }
-            else if (clave.trim()==='') {
-                if(Platform.OS === 'web') {
-                    window.alert ('Error, porfavor ingresa tu contraseña');
-                } else {
-                    Alert.alert ('Error, porfavor ingresa tu contraseña')
-                }
-            }
-            else if(correo.trim()===''){
-                if(Platform.OS === 'web') {
-                    window.alert ('Error, porfavor ingresa tu correo electronico');
-                } else {
-                    Alert.alert ('Error, porfavor ingresa tu correo electronico')
-                }
-            }
-            else if(!validar.test(correo.trim())){
-                if(Platform.OS === 'web') {
-                    window.alert ('Error, tu correo debe contener un @ y un dominio');
-                } else {
-                    Alert.alert ('Error, tu correo debe contener un @ y un dominio')
-                }
+        if ((correo.trim()==='') && (clave.trim)) {
+            if(Platform.OS === 'web') {
+                window.alert ('Error, porfavor ingresa los campos correspondientes');
             } else {
-                if (Platform.OS === 'web') {
-                    window.alert(`Registro completado, Bienvenid@ ${nombre} con correo ${correo}`);
-                } else {
-                    Alert.alert(`Registro completado, Bienvenid@ ${nombre} con correo ${correo}`);
-                }
+                Alert.alert ('Error, porfavor ingresa los campos correspondientes')
+            }
+        } else if (clave.trim()==='') {
+            if(Platform.OS === 'web') {
+                window.alert ('Error, porfavor ingresa tu contraseña');
+            } else {
+                Alert.alert ('Error, porfavor ingresa tu contraseña')
+            }
+        } else if(correo.trim()===''){
+            if(Platform.OS === 'web') {
+                window.alert ('Error, porfavor ingresa tu correo electronico');
+            } else {
+                Alert.alert ('Error, porfavor ingresa tu correo electronico')
+            }
+        } else if(!validar.test(correo.trim())){
+            if(Platform.OS === 'web') {
+                window.alert ('Error, tu correo debe contener un @ y un dominio');
+            } else {
+                Alert.alert ('Error, tu correo debe contener un @ y un dominio')
+            }
+        } else {
+            if (Platform.OS === 'web') {
+                window.alert(`Registro completado, Bienvenid@ ${nombre} con correo ${correo}`);
+            } else {
+                Alert.alert(`Registro completado, Bienvenid@ ${nombre} con correo ${correo}`);
             }
         }
+    }
 
     return (
         <View style={styles.container}>
@@ -78,7 +75,7 @@ export default function Registro({navigation}){
                 <TouchableOpacity 
                 style={styles.boton}
                 onPress={mostrarAlerta}>
-                    <text>Registrarme ahora</text>
+                    <Text>Comenzar</Text>
                 </TouchableOpacity>
             </View>
         </View>     
@@ -97,17 +94,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     sp: {
-        flex: 5,
+        flex: 9,
         justifyContent: 'center',
         alignItems: 'center',
     },
     tp: {
-        flex: 5,
-        justifyContent: 'end',
+        flex: 7,
+        justifyContent: 'center',
         alignItems: 'center',
     },
     logo: {
-        flex: 1,
+        flex: 2,
         fontSize: 22,
         fontWeight: 'bold',
         marginBottom: 15,
@@ -132,16 +129,11 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         color: '#ffffff',
     },
-    titulo1: {
-        fontSize: 22,
-        fontWeight: 'bold',
-        marginBottom: 15,
-        color: '#ffffff',
-    },
     recuadro: {
         borderWidth: 1,
         borderColor: 'white',
-        padding: 10,
+        paddingVertical: 8,
+        paddingHorizontal: 20,
         marginBottom: 20,
         backgroundColor: 'white',
         borderRadius: 15,
@@ -150,12 +142,13 @@ const styles = StyleSheet.create({
     },
     boton:{
         marginTop:20,
-        flexDirection:'row',
         gap:20,
         color: '#007A83',
         backgroundColor: '#ffffff',
-        borderRadius: 8,
-        paddingVertical: 5,
-        paddingHorizontal: 30,
+        borderRadius: 15,
+        paddingVertical: 8,
+        paddingHorizontal: 20,
+        fontSize: 20,
+        fontWeight: 'bold',
     },
 })

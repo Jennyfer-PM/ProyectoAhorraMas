@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 
 export default function PagInicio({navigation}){
@@ -12,17 +12,17 @@ export default function PagInicio({navigation}){
         <View style={styles.sp}>
         <TouchableOpacity 
         style={styles.boton}>
-          <text style={styles.textoBoton}>Registrarme ahora</text>
+          <Text style={styles.textoBoton}>Registrarse ahora</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
         style={styles.boton}>
-          <text style={styles.textoBoton}>Iniciar sesión</text>
+          <Text style={styles.textoBoton}>Iniciar sesión</Text>
         </TouchableOpacity>
         </View>
 
         <View style={styles.tp}>
-        <text style={styles.subtitulo}>Tu presupuesto, bajo control.</text>
+        <Text style={styles.subtitulo}>Tu presupuesto, bajo control.</Text>
         </View>
 
       </View>
@@ -37,20 +37,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#007A83',
   },
   pp: {
-    flex: 1,
+    flex: 2,
     padding: 20,
     backgroundColor: '#007A83',
   },
   sp: {
-    flex: 6,
+    flex: 7,
     padding: 20,
     backgroundColor: '#007A83',
     justifyContent: 'center',
     alignItems: 'center',
   },
   tp: {
+    flex: 1,
     padding: 20,
     backgroundColor: '#007A83',
+    justifyContent: 'center',
+    alignItems: 'end',
   },
   boton:{
     marginTop: 30,
@@ -59,14 +62,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 8,
-    paddingVertical: 5,
-    paddingHorizontal: 30,
+    borderRadius: 18,
+    width: 250,
+    height: 50,
   },
   textoBoton: {
     color: '#007A83',
-    fontSize: 30,
-    fontWeight: '900',
+    fontSize: 23,
+    fontWeight: '300',
   },
   titulo: {
     flex: 1,
