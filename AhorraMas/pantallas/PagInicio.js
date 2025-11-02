@@ -1,7 +1,7 @@
 import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 
-export default function PagInicio(){
+export default function PagInicio({navigation}){
     return (
       <View style={styles.container}>
         <View style={styles.pp}>

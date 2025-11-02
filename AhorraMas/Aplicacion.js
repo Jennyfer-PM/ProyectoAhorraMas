@@ -1,7 +1,7 @@
-import PagInicio from './pantallas/PagInicio';
+import Menu from './pantallas/Menu';
 
 export default function Aplicacion() {
   return (
-    <PagInicio></PagInicio>
+    <Menu></Menu>
   );
 }
