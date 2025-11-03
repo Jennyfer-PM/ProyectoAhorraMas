@@ -140,8 +140,8 @@ export default function ResumenMensual(){
         </View>
 
         <View style={styles.tp}>
-          <Text style={styles.subtitulo}>Ahorros: {ahorros}</Text>
-          <Text style={styles.subtitulo}>Gastos: {gastos}</Text>
+          <Text style={styles.subtitulo1}>Ahorros: {ahorros}</Text>
+          <Text style={styles.subtitulo1}>Gastos: {gastos}</Text>
           <TouchableOpacity 
             style={styles.boton}
             onPress={()=>{setValido(true)}}>
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   sp: {
-    flex: 25,
+    flex: 15,
     justifyContent: 'center',
     alignItems: 'start',
   },
@@ -190,19 +190,19 @@ const styles = StyleSheet.create({
     marginBottom: 1,
     color: '#ffffff',
     width: 340,
-    height: 45,
+    height: 30,
     fontWeight: '500',
   },
   subtitulo1: {
     fontSize: 20,
-    marginBottom: 1,
     color: '#ffffff',
     width: 340,
     height: 45,
+    marginBottom: 3,
     fontWeight: '500',
   },
   tp: {
-    flex: 1,
+    flex: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     gap:20,
     backgroundColor: '#ffffff',
     borderRadius: 18,
-    width: 160,
+    width: 260,
     height: 45,
     justifyContent: 'center',
     alignItems: 'center',
