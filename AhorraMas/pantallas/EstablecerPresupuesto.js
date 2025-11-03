@@ -60,9 +60,9 @@ export default function EstablecerPresupuesto(){
 
         <View style={styles.sp}>
           <Text style={styles.subtitulo1}>Distribución del presupuesto </Text>
-          <Text style={styles.subtitulo}>Presupuesto total: </Text>
-          <Text style={styles.subtitulo}>Gastos: </Text>
-          <Text style={styles.subtitulo}>Calculo de ahorro recomendado: </Text>
+          <Text style={styles.subtitulo}>Presupuesto total: {total}</Text>
+          <Text style={styles.subtitulo}>Gastos: {gastos}</Text>
+          <Text style={styles.subtitulo}>Calculo de ahorro recomendado: {total - gastos}</Text>
         </View>
 
         <View style={styles.tp}>
@@ -196,10 +196,10 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     width: 320,
     height: 45,
-    marginBottom: 10,
+    marginBottom: 15,
     backgroundColor: 'white',
     borderRadius: 18,
     fontSize: 20,
-    color: 'grey',
+    color: 'black',
   },
 })
