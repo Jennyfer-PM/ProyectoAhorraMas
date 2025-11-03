@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007A83',
   },
   logo: {
-    flex: 3,
+    flex: 2,
     justifyContent: 'start',
     alignItems: 'start',
     marginBottom: 15,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   tp: {
-    flex: 5,
+    flex: 6,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     gap:20,
     backgroundColor: '#ffffff',
     borderRadius: 18,
-    width: 260,
+    width: 160,
     height: 45,
     justifyContent: 'center',
     alignItems: 'center',

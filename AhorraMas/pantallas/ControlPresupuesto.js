@@ -39,7 +39,7 @@ export default function EstablecerPresupuesto(){
         </View>
 
         <View style={styles.pp}>
-            <Text style={styles.titulo}>Control de Presupuesto</Text>
+            <Text style={styles.titulo1}>Control de Presupuesto</Text>
             <TextInput
             style={styles.recuadro}
             placeholder='Nuevo gasto:'
@@ -76,8 +76,8 @@ export default function EstablecerPresupuesto(){
         </View>
 
         <View style={styles.pp}>
-            <Text style={styles.titulo}>Control de Presupuesto</Text>
-            <Text style={styles.titulo}>Gastos del día</Text>
+            <Text style={styles.titulo1}>Control de Presupuesto</Text>
+            <Text style={styles.titulo1}>Gastos del día</Text>
         </View>
 
         <View style={styles.sp}>
@@ -106,8 +106,8 @@ export default function EstablecerPresupuesto(){
         </View>
 
         <View style={styles.pp}>
-            <Text style={styles.titulo}>Control de Presupuesto</Text>
-            <Text style={styles.titulo}>Gastos del ultimo mes</Text>
+            <Text style={styles.titulo1}>Control de Presupuesto</Text>
+            <Text style={styles.titulo1}>Gastos del ultimo mes</Text>
         </View>
 
         <View style={styles.sp}>
@@ -136,8 +136,8 @@ export default function EstablecerPresupuesto(){
         </View>
 
         <View style={styles.pp}>
-            <Text style={styles.titulo}>Control de Presupuesto</Text>
-            <Text style={styles.titulo}>Estado de cuenta</Text>
+            <Text style={styles.titulo1}>Control de Presupuesto</Text>
+            <Text style={styles.titulo1}>Estado de cuenta</Text>
         </View>
 
         <View style={styles.sp}>
@@ -231,9 +231,15 @@ const styles = StyleSheet.create({
       alignItems: 'center',
   },
   titulo: {
-    fontSize: 55,
+    fontSize: 50,
     fontWeight: '300',
     marginBottom: 25,
+    color: '#ffffff',
+  },
+  titulo1: {
+    fontSize: 29,
+    fontWeight: 'bold',
+    marginBottom: 75,
     color: '#ffffff',
   },
   subtitulo: {

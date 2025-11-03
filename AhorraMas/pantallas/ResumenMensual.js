@@ -48,7 +48,7 @@ export default function ResumenMensual(){
         </View>
 
         <View style={styles.pp}>
-            <Text style={styles.titulo}>Distribución del presupuesto: {presupuesto}</Text>
+            <Text style={styles.subtitulo1}>Distribución del presupuesto: {presupuesto}</Text>
             <TextInput
             style={styles.recuadro}
             placeholder='Ahorros:'
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007A83',
   },
   logo: {
-    flex: 3,
+    flex: 2,
     justifyContent: 'start',
     alignItems: 'start',
     marginBottom: 15,
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   pp: {
-    flex: 1,
+    flex: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -181,28 +181,28 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   sp: {
-    flex: 15,
+    flex: 10,
     justifyContent: 'center',
     alignItems: 'start',
-  },
-  subtitulo: {
-    fontSize: 15,
-    marginBottom: 1,
-    color: '#ffffff',
     width: 340,
     height: 30,
+  },
+  subtitulo: {
+    fontSize: 18,
+    marginBottom: 1,
+    color: '#ffffff',
     fontWeight: '500',
+    width: 340,
+    height: 30,
   },
   subtitulo1: {
-    fontSize: 20,
+    fontSize: 21,
     color: '#ffffff',
-    width: 340,
-    height: 45,
     marginBottom: 3,
     fontWeight: '500',
   },
   tp: {
-    flex: 5,
+    flex: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },
