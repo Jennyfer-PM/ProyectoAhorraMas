@@ -25,28 +25,28 @@ export default function MenuApp() {
                     <Text style={styles.logotexto}>AHORRO+</Text>
                 </View>
                 <View style={styles.pp}>
-                    <Text style={styles.texto}>Planifica tu presupuesto y controla tus finanzas sin complicaciones.</Text>
+                    <Text style={styles.subtitulo}>Planifica tu presupuesto y controla tus finanzas sin complicaciones.</Text>
                 </View>
                 <View style={styles.sp}>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Establecer')}>
-                        <text>Establecer Presupuesto</text>
+                        <Text style={styles.textoBoton}>Establecer Presupuesto</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Control')}>
-                        <text>Control de Presupuesto</text>
+                        <Text style={styles.textoBoton}>Control de Presupuesto</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Resumen')}>
-                        <text>Resumen Mensual</text>
+                        <Text style={styles.textoBoton}>Resumen Mensual</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Graficos')}>
-                        <text>Ver Gráficos</text>
+                        <Text style={styles.textoBoton}>Ver Gráficos</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -57,6 +57,7 @@ export default function MenuApp() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        padding: 25,
         backgroundColor: '#007A83',
     },
     pp: {
@@ -66,37 +67,38 @@ const styles = StyleSheet.create({
     },
     logo: {
         flex: 2,
-        marginBottom: 15,
-        justifyContent: 'center',
+        justifyContent: 'start',
         alignItems: 'start',
+        marginBottom: 15,
     },
     logotexto: {
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 15,
         color: '#ffffff',
     },
-    texto: {
-        fontSize: 35,
+    subtitulo: {
+        fontSize: 25,
         marginBottom: 15,
         color: '#ffffff',
     },
     sp: {
-        flex: 9,
+        flex: 10,
         justifyContent: 'start',
         alignItems: 'center',
     },
     boton:{
-        marginTop:35,
-        gap:40,
-        flexDirection:'column',
-        color: '#007A83',
+        marginTop:40,
+        gap:20,
         backgroundColor: '#ffffff',
-        borderRadius: 20,
+        borderRadius: 18,
+        width: 320,
         height: 40,
-        width: 460,
-        fontSize: 35,
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
     },
+    textoBoton: {
+        color: '#007A83',
+        fontSize: 23,
+        fontWeight: '400',
+  },
 })

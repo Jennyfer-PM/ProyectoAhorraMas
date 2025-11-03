@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import PagInicio from './PagInicio';
 import Registro from './Registro';
 import MenuApp from './MenuApp';
+import Perfil from './Perfil';
+
 
 
 export default function Menu() {
@@ -15,15 +17,18 @@ export default function Menu() {
         return <Registro/>;
     case 'MenuApp':
         return <MenuApp/>;
+    case 'Perfil':
+        return <Perfil/>;
     case 'menu':
         default:
         return (
             <View style={styles.container}>
                 <Text style={styles.menu}> Menu</Text>
                 <View style={styles.botoncitos}>
-                <Button color='#007A83' onPress={()=>setScreen('Inicioo')} title='Página de inicio'></Button>
+                <Button color='#007A83' onPress={()=>setScreen('Inicio')} title='Página de inicio'></Button>
                 <Button color='#007A83' onPress={()=>setScreen('Registro')} title='Página de registro'></Button>
                 <Button color='#007A83' onPress={()=>setScreen('MenuApp')} title='Menu de la App'></Button>
+                <Button color='#007A83' onPress={()=>setScreen('Perfil')} title='Perfil'></Button>
                 </View>
             </View>
     )

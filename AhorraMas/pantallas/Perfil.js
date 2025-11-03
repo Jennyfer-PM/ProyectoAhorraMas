@@ -25,28 +25,28 @@ export default function Perfil() {
                     <Text style={styles.logotexto}>AHORRO+</Text>
                 </View>
                 <View style={styles.pp}>
-                    <Text style={styles.texto}>Mantén tu perfil actualizado y gestiona tu actividad en un solo lugar.</Text>
+                    <Text style={styles.subtitulo}>Mantén tu perfil actualizado y gestiona tu actividad en un solo lugar.</Text>
                 </View>
                 <View style={styles.sp}>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Registrar')}>
-                        <text>Registrar Transacciones</text>
+                        <Text style={styles.textoBoton}>Registrar Transacciones</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Gestionar')}>
-                        <text>Gestionar Transacciones</text>
+                        <Text style={styles.textoBoton}>Gestionar Transacciones</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Filtrar')}>
-                        <text>Filtrar Transacciones</text>
+                        <Text style={styles.textoBoton}>Filtrar Transacciones</Text>
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Editar')}>
-                        <text>Editar Perfil</text>
+                        <Text style={styles.textoBoton}>Editar Perfil</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -57,6 +57,7 @@ export default function Perfil() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        padding: 25,
         backgroundColor: '#007A83',
     },
     pp: {
@@ -66,37 +67,38 @@ const styles = StyleSheet.create({
     },
     logo: {
         flex: 2,
-        marginBottom: 15,
-        justifyContent: 'center',
+        justifyContent: 'start',
         alignItems: 'start',
+        marginBottom: 15,
     },
     logotexto: {
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 15,
         color: '#ffffff',
     },
-    texto: {
-        fontSize: 35,
+    subtitulo: {
+        fontSize: 25,
         marginBottom: 15,
         color: '#ffffff',
     },
     sp: {
-        flex: 9,
+        flex: 10,
         justifyContent: 'start',
         alignItems: 'center',
     },
     boton:{
-        marginTop:35,
-        gap:40,
-        flexDirection:'column',
-        color: '#007A83',
+        marginTop:40,
+        gap:20,
         backgroundColor: '#ffffff',
-        borderRadius: 20,
+        borderRadius: 18,
+        width: 320,
         height: 40,
-        width: 460,
-        fontSize: 35,
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
     },
+    textoBoton: {
+        color: '#007A83',
+        fontSize: 23,
+        fontWeight: '400',
+  },
 })

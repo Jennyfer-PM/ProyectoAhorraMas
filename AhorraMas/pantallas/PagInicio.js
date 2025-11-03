@@ -1,5 +1,4 @@
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
-import React, { Component } from 'react'
 
 export default function PagInicio({navigation}){
     return (

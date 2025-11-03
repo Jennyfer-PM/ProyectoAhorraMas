@@ -50,7 +50,7 @@ export default function Registro({navigation}){
 
             <View style={styles.pp}>
                 <Text style={styles.titulo}>Comenzar</Text>
-                <Text style={styles.subtitulo}>Ingresa tu dirección de correo electrónico para comenzar</Text>
+                <Text style={styles.subtitulo}>Ingresa tu dirección de correo electrónico para comenzar.</Text>
             </View>
         
             <View style={styles.sp}>
@@ -75,7 +75,7 @@ export default function Registro({navigation}){
                 <TouchableOpacity 
                 style={styles.boton}
                 onPress={mostrarAlerta}>
-                    <Text>Comenzar</Text>
+                    <Text style={styles.textoBoton}>Comenzar</Text>
                 </TouchableOpacity>
             </View>
         </View>     
@@ -85,16 +85,16 @@ export default function Registro({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
+        padding: 25,
         backgroundColor: '#007A83',
     },
     pp: {
-        flex: 5,
+        flex: 3,
         justifyContent: 'center',
         alignItems: 'center',
     },
     sp: {
-        flex: 9,
+        flex: 5,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -105,50 +105,50 @@ const styles = StyleSheet.create({
     },
     logo: {
         flex: 2,
-        fontSize: 22,
-        fontWeight: 'bold',
-        marginBottom: 15,
-        color: '#ffffff',
         justifyContent: 'start',
         alignItems: 'start',
+        marginBottom: 15,
     },
     logotexto: {
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: 'bold',
-        marginBottom: 15,
         color: '#ffffff',
     },
     titulo: {
-        fontSize: 50,
-        marginBottom: 15,
+        fontSize: 55,
+        fontWeight: '300',
+        marginBottom: 25,
         color: '#ffffff',
-        justifyContent: 'center',
     },
     subtitulo: {
-        fontSize: 22,
+        fontSize: 20,
         marginBottom: 15,
         color: '#ffffff',
     },
     recuadro: {
         borderWidth: 1,
         borderColor: 'white',
-        paddingVertical: 8,
-        paddingHorizontal: 20,
-        marginBottom: 20,
+        width: 230,
+        height: 45,
+        marginBottom: 10,
         backgroundColor: 'white',
-        borderRadius: 15,
-        color: '#007A83',
+        borderRadius: 18,
         fontSize: 20,
+        color: 'grey',
     },
     boton:{
         marginTop:20,
         gap:20,
-        color: '#007A83',
         backgroundColor: '#ffffff',
-        borderRadius: 15,
-        paddingVertical: 8,
-        paddingHorizontal: 20,
-        fontSize: 20,
-        fontWeight: 'bold',
+        borderRadius: 18,
+        width: 230,
+        height: 45,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
+    textoBoton: {
+        color: '#007A83',
+        fontSize: 23,
+        fontWeight: '400',
+  },
 })
