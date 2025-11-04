@@ -5,6 +5,8 @@ import ControlPresupuesto from './ControlPresupuesto';
 import ResumenMensual from './ResumenMensual';
 import VerGraficos from './VerGraficos';
 import Perfil from './Perfil';
+import FiltrarTransacciones from './FiltrarTransacciones';
+import EditarPerfil from './EditarPerfil';
 
 export default function MenuApp() {
   const [screen, setScreen] = useState('menu');
@@ -20,42 +22,56 @@ export default function MenuApp() {
         return <VerGraficos/>;
     case 'Perfil':
         return <Perfil/>;
-    case 'menu':
-        default:
+    case 'Filtrar':
+        return <FiltrarTransacciones/>;
+    case 'Editar':
+        return <EditarPerfil/>;
+    default:
         return (
             <View style={styles.container}>
-                <View style={styles.logo}>
-                    <Text style={styles.logotexto}>AHORRO+</Text>
-                </View>
                 <View style={styles.pp}>
-                    <Text style={styles.subtitulo}>Planifica tu presupuesto y controla tus finanzas sin complicaciones.</Text>
-                </View>
-                <View style={styles.sp}>
-                    <TouchableOpacity 
-                        style={styles.boton}
-                        onPress={()=>setScreen('Establecer')}>
-                        <Text style={styles.textoBoton}>Establecer Presupuesto</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.boton}
-                        onPress={()=>setScreen('Control')}>
-                        <Text style={styles.textoBoton}>Control de Presupuesto</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.boton}
-                        onPress={()=>setScreen('Resumen')}>
-                        <Text style={styles.textoBoton}>Resumen Mensual</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.boton}
-                        onPress={()=>setScreen('Graficos')}>
-                        <Text style={styles.textoBoton}>Ver Gráficos</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
+                                        <View style={styles.logo}>
+                        <Text style={styles.logotexto}>AHORRO+</Text>
+                        <Text style={styles.subtitulo}>Controla tus finanzas</Text>
+                    </View>
+                    
+                    <View style={styles.sp}>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Establecer')}>
+                            <Text style={styles.textoBoton}>Establecer Presupuesto</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Control')}>
+                            <Text style={styles.textoBoton}>Control de Presupuesto</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Resumen')}>
+                            <Text style={styles.textoBoton}>Resumen Mensual</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Graficos')}>
+                            <Text style={styles.textoBoton}>Ver Gráficos</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
                         style={styles.boton}
                         onPress={()=>setScreen('Perfil')}>
                         <Text style={styles.textoBoton}>Perfil</Text>
                     </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Filtrar')}>
+                            <Text style={styles.textoBoton}>Filtrar Transacciones</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Editar')}>
+                            <Text style={styles.textoBoton}>Editar Perfil</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
     )
