@@ -57,13 +57,13 @@ const styles = StyleSheet.create({
     },
     pp: {
         flex: 3,
-        justifyContent: 'start',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     logo: {
         flex: 2,
-        justifyContent: 'start',
-        alignItems: 'start',
+        justifyContent: 'center',
+        alignItems: 'center',
         marginBottom: 15,
     },
     logotexto: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     },
     sp: {
         flex: 10,
-        justifyContent: 'start',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     boton:{

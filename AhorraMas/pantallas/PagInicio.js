@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   pp: {
     flex: 2,
     padding: 20,
+    alignItems: 'center',
     backgroundColor: '#007A83',
   },
   sp: {
@@ -75,15 +76,15 @@ const styles = StyleSheet.create({
   titulo: {
     flex: 1,
     color: '#ffffff',
-    justifyContent: 'start',
-    alignItems: 'start',
+    justifyContent: 'center',
+    alignItems: 'center',
     fontWeight: 'bold',
     fontSize: 40,
   },
   subtitulo: {
     color: '#ffffff',
-    justifyContent: 'start',
-    alignItems: 'start',
+    justifyContent: 'center',
+    alignItems: 'center',
     fontSize: 20,
   },
 })
