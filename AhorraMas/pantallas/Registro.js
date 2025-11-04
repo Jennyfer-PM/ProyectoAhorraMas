@@ -1,72 +1,85 @@
-import { Text, StyleSheet, View, TextInput, Alert, Platform, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, View, TextInput, Alert, Platform, TouchableOpacity} from 'react-native'
 import React, { useState } from 'react'
-import MenuApp from './MenuApp'
 
-const validar = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)
+const validar = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
-export default function Registro() {
-  const [correo, setCorreo] = useState('')
-  const [clave, setClave] = useState('')
-  const [screen, setScreen] = useState('registro')
+export default function Registro({navigation}){
 
-  const mostrarAlerta = () => {
-    if (correo.trim() === '' && clave.trim() === '') {
-      Alert.alert('Error', 'Por favor, ingresa los campos correspondientes')
-    } else if (correo.trim() === '') {
-      Alert.alert('Error', 'Por favor, ingresa tu correo electrónico')
-    } else if (clave.trim() === '') {
-      Alert.alert('Error', 'Por favor, ingresa tu contraseña')
-    } else if (!validar.test(correo.trim())) {
-      Alert.alert('Error', 'Tu correo debe contener un @ y un dominio')
-    } else {
-      Alert.alert('Registro completado', `Bienvenid@ con correo ${correo}`)
-      setScreen('menu') // cambia de pantalla al MenuApp
+    const [correo, setCorreo] = useState('');
+    const [clave, setClave] = useState('');
+
+    const mostrarAlerta = () => {
+        if ((correo.trim()==='') && (clave.trim)) {
+            if(Platform.OS === 'web') {
+                window.alert ('Error, porfavor ingresa los campos correspondientes');
+            } else {
+                Alert.alert ('Error, porfavor ingresa los campos correspondientes')
+            }
+        } else if (clave.trim()==='') {
+            if(Platform.OS === 'web') {
+                window.alert ('Error, porfavor ingresa tu contraseña');
+            } else {
+                Alert.alert ('Error, porfavor ingresa tu contraseña')
+            }
+        } else if(correo.trim()===''){
+            if(Platform.OS === 'web') {
+                window.alert ('Error, porfavor ingresa tu correo electronico');
+            } else {
+                Alert.alert ('Error, porfavor ingresa tu correo electronico')
+            }
+        } else if(!validar.test(correo.trim())){
+            if(Platform.OS === 'web') {
+                window.alert ('Error, tu correo debe contener un @ y un dominio');
+            } else {
+                Alert.alert ('Error, tu correo debe contener un @ y un dominio')
+            }
+        } else {
+            if (Platform.OS === 'web') {
+                window.alert(`Registro completado, Bienvenid@ ${nombre} con correo ${correo}`);
+            } else {
+                Alert.alert(`Registro completado, Bienvenid@ ${nombre} con correo ${correo}`);
+            }
+        }
     }
-  }
 
-  switch (screen) {
-    case 'menu':
-      return <MenuApp />
-    default:
-      return (
+    return (
         <View style={styles.container}>
-          <View style={styles.logo}>
-            <Text style={styles.logotexto}>AHORRO+</Text>
-          </View>
+            <View style={styles.logo}>
+                <Text style={styles.logotexto}>AHORRO+</Text>
+            </View>
 
-          <View style={styles.pp}>
-            <Text style={styles.titulo}>Comenzar</Text>
-            <Text style={styles.subtitulo}>
-              Ingresa tu dirección de correo electrónico para comenzar.
-            </Text>
-          </View>
+            <View style={styles.pp}>
+                <Text style={styles.titulo}>Comenzar</Text>
+                <Text style={styles.subtitulo}>Ingresa tu dirección de correo electrónico para comenzar.</Text>
+            </View>
+        
+            <View style={styles.sp}>
+                <TextInput
+                    style={styles.recuadro}
+                    placeholder='Correo Electrónico:'
+                    value = {correo}
+                    onChangeText={setCorreo}
+                    maxLength={100}
+                />
+                <TextInput
+                    style={styles.recuadro}
+                    placeholder='Contraseña:'
+                    value = {clave}
+                    onChangeText={setClave}
+                    maxLength={50}
+                    secureTextEntry={true}
+                />
+            </View>
 
-          <View style={styles.sp}>
-            <TextInput
-              style={styles.recuadro}
-              placeholder="Correo Electrónico:"
-              value={correo}
-              onChangeText={setCorreo}
-              maxLength={100}
-            />
-            <TextInput
-              style={styles.recuadro}
-              placeholder="Contraseña:"
-              value={clave}
-              onChangeText={setClave}
-              maxLength={50}
-              secureTextEntry={true}
-            />
-          </View>
-
-          <View style={styles.tp}>
-            <TouchableOpacity style={styles.boton} onPress={mostrarAlerta}>
-              <Text style={styles.textoBoton}>Comenzar</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      )
-  }
+            <View style={styles.tp}>
+                <TouchableOpacity 
+                style={styles.boton}
+                onPress={mostrarAlerta}>
+                    <Text style={styles.textoBoton}>Comenzar</Text>
+                </TouchableOpacity>
+            </View>
+        </View>     
+    );
 }
 
 const styles = StyleSheet.create({
