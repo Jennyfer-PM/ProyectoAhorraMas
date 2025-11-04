@@ -5,8 +5,6 @@ import ControlPresupuesto from './ControlPresupuesto';
 import ResumenMensual from './ResumenMensual';
 import VerGraficos from './VerGraficos';
 import Perfil from './Perfil';
-import FiltrarTransacciones from './FiltrarTransacciones';
-import EditarPerfil from './EditarPerfil';
 
 export default function MenuApp() {
   const [screen, setScreen] = useState('menu');
@@ -22,10 +20,6 @@ export default function MenuApp() {
         return <VerGraficos/>;
     case 'Perfil':
         return <Perfil/>;
-    case 'Filtrar':
-        return <FiltrarTransacciones/>;
-    case 'Editar':
-        return <EditarPerfil/>;
     default:
         return (
             <View style={styles.container}>
@@ -61,16 +55,6 @@ export default function MenuApp() {
                         onPress={()=>setScreen('Perfil')}>
                         <Text style={styles.textoBoton}>Perfil</Text>
                     </TouchableOpacity>
-                        <TouchableOpacity 
-                            style={styles.boton}
-                            onPress={()=>setScreen('Filtrar')}>
-                            <Text style={styles.textoBoton}>Filtrar Transacciones</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity 
-                            style={styles.boton}
-                            onPress={()=>setScreen('Editar')}>
-                            <Text style={styles.textoBoton}>Editar Perfil</Text>
-                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
