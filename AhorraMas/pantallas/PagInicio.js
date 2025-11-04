@@ -10,14 +10,12 @@ export default function PagInicio({navigation}){
 
         <View style={styles.sp}>
         <TouchableOpacity 
-        style={styles.boton}
-        onPress={() => navigation.navigate('Registro')}>
+        style={styles.boton}>
           <Text style={styles.textoBoton}>Registrarse ahora</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
-        style={styles.boton}
-        onPress={() => navigation.navigate('MenuApp')}>
+        style={styles.boton}>
           <Text style={styles.textoBoton}>Iniciar sesión</Text>
         </TouchableOpacity>
         </View>
