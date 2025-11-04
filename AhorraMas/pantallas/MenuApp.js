@@ -1,52 +1,65 @@
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
-import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
+import EstablecerPresupuesto from './EstablecerPresupuesto';
+import ControlPresupuesto from './ControlPresupuesto';
+import ResumenMensual from './ResumenMensual';
+import VerGraficos from './VerGraficos';
+import Perfil from './Perfil';
 
 export default function MenuApp() {
-  const navigation = useNavigation();
+  const [screen, setScreen] = useState('menu');
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.pp}>
-        <View style={styles.logo}>
-          <Text style={styles.logotexto}>AHORRO+</Text>
-          <Text style={styles.subtitulo}>Controla tus finanzas</Text>
-        </View>
-        
-        <View style={styles.sp}>
-          <TouchableOpacity 
-            style={styles.boton}
-            onPress={() => navigation.navigate('EstablecerPresupuesto')}>
-            <Text style={styles.textoBoton}>Establecer Presupuesto</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity 
-            style={styles.boton}
-            onPress={() => navigation.navigate('ControlPresupuesto')}>
-            <Text style={styles.textoBoton}>Control de Presupuesto</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity 
-            style={styles.boton}
-            onPress={() => navigation.navigate('ResumenMensual')}>
-            <Text style={styles.textoBoton}>Resumen Mensual</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity 
-            style={styles.boton}
-            onPress={() => navigation.navigate('VerGraficos')}>
-            <Text style={styles.textoBoton}>Ver Gráficos</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity 
-            style={styles.boton}
-            onPress={() => navigation.navigate('Perfil')}>
-            <Text style={styles.textoBoton}>Perfil</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    </View>
-  );
+  switch(screen){
+    case 'Establecer':
+        return <EstablecerPresupuesto/>;
+    case 'Control':
+        return <ControlPresupuesto/>;
+    case 'Resumen':
+        return <ResumenMensual/>;
+    case 'Graficos':
+        return <VerGraficos/>;
+    case 'Perfil':
+        return <Perfil/>;
+    default:
+        return (
+            <View style={styles.container}>
+                <View style={styles.pp}>
+                                        <View style={styles.logo}>
+                        <Text style={styles.logotexto}>AHORRO+</Text>
+                        <Text style={styles.subtitulo}>Controla tus finanzas</Text>
+                    </View>
+                    
+                    <View style={styles.sp}>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Establecer')}>
+                            <Text style={styles.textoBoton}>Establecer Presupuesto</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Control')}>
+                            <Text style={styles.textoBoton}>Control de Presupuesto</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Resumen')}>
+                            <Text style={styles.textoBoton}>Resumen Mensual</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            style={styles.boton}
+                            onPress={()=>setScreen('Graficos')}>
+                            <Text style={styles.textoBoton}>Ver Gráficos</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                        style={styles.boton}
+                        onPress={()=>setScreen('Perfil')}>
+                        <Text style={styles.textoBoton}>Perfil</Text>
+                    </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
