@@ -4,6 +4,7 @@ import EstablecerPresupuesto from './EstablecerPresupuesto';
 import ControlPresupuesto from './ControlPresupuesto';
 import ResumenMensual from './ResumenMensual';
 import VerGraficos from './VerGraficos';
+import Perfil from './Perfil';
 
 export default function MenuApp() {
   const [screen, setScreen] = useState('menu');
@@ -17,6 +18,8 @@ export default function MenuApp() {
         return <ResumenMensual/>;
     case 'Graficos':
         return <VerGraficos/>;
+    case 'Perfil':
+        return <Perfil/>;
     case 'menu':
         default:
         return (
@@ -47,6 +50,11 @@ export default function MenuApp() {
                         style={styles.boton}
                         onPress={()=>setScreen('Graficos')}>
                         <Text style={styles.textoBoton}>Ver Gráficos</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                        style={styles.boton}
+                        onPress={()=>setScreen('Perfil')}>
+                        <Text style={styles.textoBoton}>Perfil</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -87,7 +95,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     boton:{
-        marginTop:40,
+        marginTop:25,
         gap:20,
         backgroundColor: '#ffffff',
         borderRadius: 18,

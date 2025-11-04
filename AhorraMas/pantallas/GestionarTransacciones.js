@@ -139,13 +139,13 @@ export default function RegistrarTransacciones(){
 }
 
 const styles = StyleSheet.create({
-    container: {
+  container: {
     flex: 1,
     padding: 25,
     backgroundColor: '#007A83',
   },
   logo: {
-    flex: 3,
+    flex: 2,
     justifyContent: 'start',
     alignItems: 'start',
     marginBottom: 15,
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   pp: {
-    flex: 1,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -167,9 +167,9 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   sp: {
-    flex: 10,
+    flex: 12,
     justifyContent: 'center',
-    alignItems: 'start',
+    alignItems: 'center',
   },
   subtitulo: {
     fontSize: 20,
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   tp: {
-    flex: 5,
+    flex: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },

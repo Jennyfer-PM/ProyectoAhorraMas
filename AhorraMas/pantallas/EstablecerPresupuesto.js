@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007A83',
   },
   logo: {
-    flex: 3,
+    flex: 2,
     justifyContent: 'start',
     alignItems: 'start',
     marginBottom: 15,
@@ -140,17 +140,17 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   pp: {
-    flex: 7,
+    flex: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },
   sp: {
-    flex: 9,
+    flex: 6,
     justifyContent: 'center',
     alignItems: 'center',
   },
   tp: {
-      flex: 3,
+      flex: 1,
       justifyContent: 'end',
       alignItems: 'center',
   },
@@ -194,8 +194,8 @@ const styles = StyleSheet.create({
   recuadro: {
     borderWidth: 1,
     borderColor: 'white',
-    width: 320,
-    height: 45,
+    width: 220,
+    height: 65,
     marginBottom: 15,
     backgroundColor: 'white',
     borderRadius: 18,

@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   pp: {
-    flex: 1,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   sp: {
     flex: 15,
     justifyContent: 'center',
-    alignItems: 'start',
+    alignItems: 'center',
   },
   subtitulo: {
     fontSize: 15,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   tp: {
-    flex: 6,
+    flex: 3,
     justifyContent: 'center',
     alignItems: 'center',
   },

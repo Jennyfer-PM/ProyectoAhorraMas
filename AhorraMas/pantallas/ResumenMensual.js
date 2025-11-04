@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   pp: {
-    flex: 5,
+    flex: 9,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
   },
   sp: {
-    flex: 10,
+    flex: 18,
     justifyContent: 'center',
     alignItems: 'start',
     width: 340,
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   tp: {
-    flex: 4,
+    flex: 7,
     justifyContent: 'center',
     alignItems: 'center',
   },
