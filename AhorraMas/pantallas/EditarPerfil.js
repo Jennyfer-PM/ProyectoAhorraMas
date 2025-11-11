@@ -47,7 +47,6 @@ export default function EditarPerfil() {
           <Text style={styles.textoCancelar}>Cancelar</Text>
         </TouchableOpacity>
       </View>
-    )
     </View>
   )
 }

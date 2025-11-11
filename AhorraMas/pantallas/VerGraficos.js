@@ -1,32 +1,27 @@
-import { Text, StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native'
+﻿import { Text, StyleSheet, View, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 
-export default function Graficas() {
+const graficaVentas = require('../assets/Graf12.jpg'); 
+
+export default function VerGraficos() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Gráficas</Text>
       </View>
 
+      <View style={styles.graficaContainer}>
+        <Text style={styles.graficaTitulo}>Gráfica de Ventas Semanales y Mensuales</Text>
+        <Image 
+          source={graficaVentas} 
+          style={styles.graficaImagen} 
+          resizeMode="contain"
+        />
+      </View>
+
       <ScrollView style={styles.menuContainer}>
         <TouchableOpacity style={styles.menuItem}>
           <Text style={styles.menuText}>Gráfica de Presupuesto</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Gráfica de Gastos</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Gráfica de Ingresos</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Gráfica por Categorías</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Gráfica Mensual</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuItem}>
@@ -58,6 +53,29 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333333',
+  },
+  graficaContainer: {
+    backgroundColor: '#ffffff',
+    marginHorizontal: 16,
+    marginTop: 10,
+    padding: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  graficaTitulo: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#555',
+  },
+  graficaImagen: {
+    width: '100%', 
+    height: 300,   
   },
   menuContainer: {
     flex: 1,
