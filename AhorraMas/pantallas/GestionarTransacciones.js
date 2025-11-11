@@ -6,7 +6,9 @@ export default function RegistrarTransacciones(){
   const [motivo, setMotivo] = useState('Deposito taquitos');
   const [fecha, setFecha] = useState('01/07/2021');
   const [destino, setDestino] = useState('Taqueria');
-  const [valido, setValido] = useState('');
+  const [valido, setValido] = useState(false);
+  const [eliminar, setEliminar] = useState(false);
+  const [delate, setDelate] = useState(false);
 
   const mostrarAlerta = () => {
     if ((monto===0) && (motivo==='') && (fecha==='') && (destino==='')) {
@@ -45,7 +47,17 @@ export default function RegistrarTransacciones(){
         } else {
           Alert.alert ('Tu transacción ha sido editada');
         }
+        setEliminar(false);
       }
+    }
+
+    const mostrarAlertaEliminar = () => {
+        if(Platform.OS === 'web') {
+          window.alert ('¿Estas seguro de que quieres eliminar la transacción?');
+        } else {
+          Alert.alert ('¿Estas seguro de que quieres eliminar la transacción?');
+        }
+      setEliminar(true);
     }
 
   if(valido) {
@@ -109,6 +121,36 @@ export default function RegistrarTransacciones(){
     );
   }
 
+
+  if(eliminar) {
+    return (
+       <View style={styles.container}>
+        <View style={styles.logo}>
+          <Text style={styles.logotexto}>AHORRO+</Text>
+        </View>
+                
+        <View style={styles.pp}>
+          <Text style={styles.titulo}>Gestionar Transacciones</Text>
+        </View>
+
+        <View style={styles.tp}>
+          <TouchableOpacity 
+            style={styles.boton}
+            onPress={()=>{setValido(true)}}>
+              <Text style={styles.textoBoton}>Editar Transacción</Text>
+          </TouchableOpacity>
+            
+          <TouchableOpacity 
+            style={styles.boton}
+            onPress={mostrarAlertaEliminar}>
+              <Text style={styles.textoBoton}>Eliminar Transacción</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    )
+  }
+
+
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
@@ -132,6 +174,11 @@ export default function RegistrarTransacciones(){
             style={styles.boton}
             onPress={()=>{setValido(true)}}>
               <Text style={styles.textoBoton}>Editar Transacción</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+            style={styles.boton}
+            onPress={mostrarAlertaEliminar}>
+              <Text style={styles.textoBoton}>Eliminar Transacción</Text>
             </TouchableOpacity>
         </View>
       </View>
