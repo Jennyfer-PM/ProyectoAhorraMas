@@ -1,7 +1,7 @@
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import Registro from './Registro'
-import MenuApp from './MenuApp'
+import MenuApp from './Login'
 
 export default function PagInicio() {
   const [screen, setScreen] = useState('inicio')
