@@ -64,6 +64,7 @@ export default function RegistrarTransacciones(){
           value = {monto}
           onChangeText={setMonto}
           maxLength={100}
+          inputMode='numeric'
           />
           <TextInput
           style={styles.recuadro}

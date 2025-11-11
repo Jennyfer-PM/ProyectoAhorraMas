@@ -47,6 +47,7 @@ export default function EstablecerPresupuesto(){
             value = {total}
             onChangeText={setTotal}
             maxLength={100}
+            inputMode='numeric'
             />
 
             <TextInput
@@ -55,6 +56,7 @@ export default function EstablecerPresupuesto(){
             value = {gastos}
             onChangeText={setGastos}
             maxLength={50}
+            inputMode='numeric'
             />
         </View>
 
@@ -92,6 +94,7 @@ export default function EstablecerPresupuesto(){
             value = {total}
             onChangeText={setTotal}
             maxLength={100}
+            inputMode='numeric'
             />
 
             <TextInput
@@ -100,6 +103,7 @@ export default function EstablecerPresupuesto(){
             value = {gastos}
             onChangeText={setGastos}
             maxLength={50}
+            inputMode='numeric'
             />
         </View>
 

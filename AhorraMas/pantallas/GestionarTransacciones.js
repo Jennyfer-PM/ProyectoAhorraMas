@@ -8,7 +8,6 @@ export default function RegistrarTransacciones(){
   const [destino, setDestino] = useState('Taqueria');
   const [valido, setValido] = useState(false);
   const [eliminar, setEliminar] = useState(false);
-  const [delate, setDelate] = useState(false);
 
   const mostrarAlerta = () => {
     if ((monto===0) && (motivo==='') && (fecha==='') && (destino==='')) {
@@ -79,6 +78,7 @@ export default function RegistrarTransacciones(){
           value = {monto}
           onChangeText={setMonto}
           maxLength={100}
+          inputMode='numeric'
           />
           <TextInput
           style={styles.recuadro}
