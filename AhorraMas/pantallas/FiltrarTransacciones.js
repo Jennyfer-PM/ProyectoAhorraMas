@@ -44,10 +44,10 @@ export default function FiltrarTransacciones(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#007A83',
   },
   header: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#007A83',
     paddingVertical: 20,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333333',
+    color: '#ffffffff',
   },
   menuContainer: {
     flex: 1,
@@ -79,14 +79,14 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   botonAplicar: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#ffffffff',
     margin: 16,
     paddingVertical: 16,
     borderRadius: 10,
     alignItems: 'center',
   },
   botonTexto: {
-    color: '#ffffff',
+    color: '#007A83',
     fontSize: 16,
     fontWeight: 'bold',
   },

@@ -55,6 +55,7 @@ export default function ResumenMensual(){
             value = {ahorros}
             onChangeText={setAhorros}
             maxLength={100}
+            inputMode='numeric'
             />
             <TextInput
             style={styles.recuadro}
@@ -62,6 +63,7 @@ export default function ResumenMensual(){
             value = {renta}
             onChangeText={setRenta}
             maxLength={100}
+            inputMode='numeric'
             />
             <TextInput
             style={styles.recuadro}
@@ -69,6 +71,7 @@ export default function ResumenMensual(){
             value = {comida}
             onChangeText={setComida}
             maxLength={100}
+            inputMode='numeric'
             />
             <TextInput
             style={styles.recuadro}
@@ -76,6 +79,7 @@ export default function ResumenMensual(){
             value = {transporte}
             onChangeText={setTransporte}
             maxLength={100}
+            inputMode='numeric'
             />
             <TextInput
             style={styles.recuadro}
@@ -83,6 +87,7 @@ export default function ResumenMensual(){
             value = {servicios}
             onChangeText={setServicios}
             maxLength={100}
+            inputMode='numeric'
             />
             <TextInput
             style={styles.recuadro}
@@ -90,6 +95,7 @@ export default function ResumenMensual(){
             value = {entretenimiento}
             onChangeText={setEntretenimiento}
             maxLength={100}
+            inputMode='numeric'
             />
             <TextInput
             style={styles.recuadro}
@@ -97,6 +103,7 @@ export default function ResumenMensual(){
             value = {otros}
             onChangeText={setOtros}
             maxLength={100}
+            inputMode='numeric'
             />
         </View>
 

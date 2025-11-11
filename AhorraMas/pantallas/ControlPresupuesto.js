@@ -46,6 +46,7 @@ export default function EstablecerPresupuesto(){
             value = {newmonto}
             onChangeText={setNewMonto}
             maxLength={100}
+            inputMode='numeric'
             />
         </View>
 

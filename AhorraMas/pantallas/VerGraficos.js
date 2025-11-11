@@ -39,10 +39,10 @@ export default function VerGraficos() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#007A83',
   },
   header: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#007A83',
     paddingVertical: 20,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333333',
+    color: '#ffffffff',
   },
   graficaContainer: {
     backgroundColor: '#ffffff',
