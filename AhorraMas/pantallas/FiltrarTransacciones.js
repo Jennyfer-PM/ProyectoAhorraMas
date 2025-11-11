@@ -79,14 +79,14 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   botonAplicar: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#ffffffff',
     margin: 16,
     paddingVertical: 16,
     borderRadius: 10,
     alignItems: 'center',
   },
   botonTexto: {
-    color: '#ffffff',
+    color: '#007A83',
     fontSize: 16,
     fontWeight: 'bold',
   },

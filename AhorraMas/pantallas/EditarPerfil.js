@@ -2,9 +2,9 @@ import { Text, StyleSheet, View, TouchableOpacity, TextInput } from 'react-nativ
 import React, { useState } from 'react'
 
 export default function EditarPerfil() {
-  const [nombre, setNombre] = useState('')
-  const [email, setEmail] = useState('')
-  const [telefono, setTelefono] = useState('')
+  const [nombre, setNombre] = useState('Usuario0001')
+  const [email, setEmail] = useState('manchegoquesogmail.com')
+  const [telefono, setTelefono] = useState('442 134 9674')
 
   return (
     <View style={styles.container}>
@@ -39,7 +39,7 @@ export default function EditarPerfil() {
           keyboardType="phone-pad"
         />
         
-        <TouchableOpacity style={styles.botonGuardar}>
+        <TouchableOpacity style={styles.botonGuardar} onPress={mostrarAlerta}>
           <Text style={styles.textoBoton}>Guardar Cambios</Text>
         </TouchableOpacity>
         
@@ -47,7 +47,6 @@ export default function EditarPerfil() {
           <Text style={styles.textoCancelar}>Cancelar</Text>
         </TouchableOpacity>
       </View>
-    )
     </View>
   )
 }
@@ -55,7 +54,7 @@ export default function EditarPerfil() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#007A83',
   },
   header: {
     backgroundColor: '#007A83',
@@ -69,7 +68,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   formContainer: {
-    flex: 1,
+    flex: 5,
     padding: 25,
     justifyContent: 'center',
   },
@@ -83,22 +82,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   botonGuardar: {
-    backgroundColor: '#007A83',
+    backgroundColor: '#ffffffff',
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
     marginBottom: 10,
   },
   botonCancelar: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#ffffffff',
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#007A83',
+    marginBottom: 10,
   },
   textoBoton: {
-    color: '#ffffff',
+    color: '#007A83',
     fontSize: 16,
     fontWeight: '600',
   },
